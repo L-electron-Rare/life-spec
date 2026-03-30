@@ -1,6 +1,5 @@
 # OS
 .DS_Store
-
 # Python
 __pycache__/
 *.pyc
@@ -10,17 +9,14 @@ venv/
 .coverage
 htmlcov/
 *.egg-info/
-
 # Node
 node_modules/
 dist/
 coverage/
 .vite/
-
-# Build / tooling
+# Build
 build/
 .tmp/
-
 # IDE
 .vscode/
 .idea/
