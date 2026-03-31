@@ -1,44 +1,37 @@
-# life-spec
+# life-spec — Spécifications Fonctionnelles FineFab
 
-Source de verite spec-first pour FineFab (specs, gates, compliance, evidence).
+Dépôt des spécifications fonctionnelles, contrats techniques et gates BMAD pour l'écosystème Factory 4 Life.
 
-## Role
-- Centraliser specs fonctionnelles et techniques.
-- Porter les gates BMAD et controles de conformite.
-- Orchestrer les evidence packs inter-repos.
+## Structure
 
-## Stack
-- Markdown
-- JSON
-
-## Structure cible
-- `specs/`: documents spec-first
-- `contracts/`: contrats et schemas
-- `gates/`: definition des gates S0-S4
-
-## Demarrage rapide
-```bash
-# Validation documentaire/contrats selon scripts du repo
-ls -la specs contracts
+```text
+specs/          # Spécifications fonctionnelles par domaine
+contracts/      # Contrats techniques inter-services
+gates/          # Définitions des gates BMAD (S0-S4)
 ```
 
-## Roadmap immediate
-- Completer S2/S3/S4.
-- Connecter les gates aux pipelines CI.
-- Standardiser generation d'- Standardiser generation d'- Standardiser generation d'- Standardiser generation d'- Standardiser generation d'- Standardiser generation d'- Standardiser generation d'- Standardiser generation d'- Standardiser generation d'- Standardiser generation d'- Standardiser generation d'- Standardiser generation d'- Standardiser generation d'- Standardiser generatg (datasets, evaluation, registry)
+## Gates BMAD
 
-## Structure cible
-- `src/`: orchestration et logique entrainement
-- `datasets/`: donnees d'entrainement
-- `scripts/`: runs, evaluation, publication
+| Gate | Nom | Description |
+| ---- | --- | ----------- |
+| S0 | Cadrage | Périmètre système, acteurs, contraintes |
+| S1 | Architecture | Composants, interfaces, flux de données |
+| S2 | Implémentation | Code, tests, couverture, CI |
+| S3 | Intégration | Tests E2E, déploiement, monitoring |
+| S4 | Production | Go-live, observabilité, gouvernance |
 
-## Demarrage rapide
-```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -e .
-```
+## Projets couverts
 
-## Roadmap immediate
-- Migrer pipeline fine-tuning depuis mascarade.
-- Mettre en place model registry + hot-swap contract.
-- Integrer controle qualite datasets.
+- `life-core` — Backend LLM router, RAG, cache
+- `life-reborn` — API Gateway
+- `life-web` — Cockpit opérationnel
+- `makelife-cad` — Plateforme CAO/EDA
+- `makelife-firmware` — Firmware ESP32
+- `makelife-hard` — Conception électronique
+- `finefab-shared` — Contrats partagés (24 schemas JSON)
+
+## Convention
+
+- Documentation en français
+- Un fichier par spec, nommé `DOMAINE_SUJET.md`
+- Chaque spec référence le gate BMAD correspondant
