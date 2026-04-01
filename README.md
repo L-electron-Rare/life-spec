@@ -1,37 +1,43 @@
-# life-spec — Spécifications Fonctionnelles FineFab
+# life-spec
 
-Dépôt des spécifications fonctionnelles, contrats techniques et gates BMAD pour l'écosystème Factory 4 Life.
+Spec-first pipeline for FineFab -- functional specifications, BMAD gates, and compliance evidence.
 
-## Structure
+Part of the [FineFab](https://github.com/L-electron-Rare) platform.
 
-```text
-specs/          # Spécifications fonctionnelles par domaine
-contracts/      # Contrats techniques inter-services
-gates/          # Définitions des gates BMAD (S0-S4)
+## What it does
+
+- Defines functional specifications for every FineFab subsystem
+- Enforces a structured gate process (BMAD S0-S4) from scoping through production
+- Stores compliance evidence and technical contracts between services
+- Acts as the single source of truth for platform architecture decisions
+
+## BMAD gates
+
+| Gate | Name | Purpose |
+|------|------|---------|
+| S0 | Scoping | System perimeter, actors, constraints |
+| S1 | Architecture | Components, interfaces, data flows |
+| S2 | Implementation | Code, tests, coverage, CI |
+| S3 | Integration | E2E tests, deployment, monitoring |
+| S4 | Production | Go-live, observability, governance |
+
+## Project structure
+
+```
+specs/        # Functional specifications by domain
+contracts/    # Technical contracts between services
+gates/        # BMAD gate definitions (S0-S4)
 ```
 
-## Gates BMAD
+## Related repos
 
-| Gate | Nom | Description |
-| ---- | --- | ----------- |
-| S0 | Cadrage | Périmètre système, acteurs, contraintes |
-| S1 | Architecture | Composants, interfaces, flux de données |
-| S2 | Implémentation | Code, tests, couverture, CI |
-| S3 | Intégration | Tests E2E, déploiement, monitoring |
-| S4 | Production | Go-live, observabilité, gouvernance |
+| Repo | Role |
+|------|------|
+| [life-core](https://github.com/L-electron-Rare/life-core) | AI backend engine |
+| [life-reborn](https://github.com/L-electron-Rare/life-reborn) | API gateway |
+| [life-web](https://github.com/L-electron-Rare/life-web) | Operator cockpit UI |
+| [finefab-shared](https://github.com/L-electron-Rare/finefab-shared) | Shared contracts and types |
 
-## Projets couverts
+## License
 
-- `life-core` — Backend LLM router, RAG, cache
-- `life-reborn` — API Gateway
-- `life-web` — Cockpit opérationnel
-- `makelife-cad` — Plateforme CAO/EDA
-- `makelife-firmware` — Firmware ESP32
-- `makelife-hard` — Conception électronique
-- `finefab-shared` — Contrats partagés (24 schemas JSON)
-
-## Convention
-
-- Documentation en français
-- Un fichier par spec, nommé `DOMAINE_SUJET.md`
-- Chaque spec référence le gate BMAD correspondant
+[MIT](LICENSE)
