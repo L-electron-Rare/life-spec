@@ -25,7 +25,7 @@ Part of the [FineFab](https://github.com/L-electron-Rare) platform.
 
 ```
 specs/        # Functional specifications by domain
-contracts/    # Technical contracts between services
+contracts/    # Contract governance index; canonical schemas live in finefab-shared
 gates/        # BMAD gate definitions (S0-S4)
 ```
 
@@ -40,4 +40,4 @@ gates/        # BMAD gate definitions (S0-S4)
 
 ## License
 
-[MIT](LICENSE)
+MIT

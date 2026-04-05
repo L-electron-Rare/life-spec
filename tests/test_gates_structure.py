@@ -20,6 +20,12 @@ class TestBmadGatesStructure(unittest.TestCase):
         for gate in ["S0", "S1", "S2", "S3", "S4"]:
             self.assertIn(gate, readme, msg=f"README should mention gate {gate}")
 
+    def test_contracts_index_exists_and_points_to_finefab_shared(self) -> None:
+        contracts_index = Path("contracts/README.md")
+        self.assertTrue(contracts_index.exists(), msg="contracts/README.md should exist")
+        content = contracts_index.read_text(encoding="utf-8")
+        self.assertIn("finefab-shared", content)
+
 
 if __name__ == "__main__":
     unittest.main()

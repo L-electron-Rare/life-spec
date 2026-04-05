@@ -16,6 +16,6 @@ Valider que l'architecture technique est définie, les interfaces documentées, 
 | Artefact | Chemin | Statut |
 | -------- | ------ | ------ |
 | Architecture C4 | `specs/architecture_c4.md` | TODO |
-| API contracts | `contracts/` | TODO |
+| API contracts | `contracts/README.md` + `../finefab-shared/schemas/` | TODO |
 | Flux de données | `specs/flux_donnees.md` | TODO |
 | Choix technologiques | `specs/choix_techniques.md` | TODO |
