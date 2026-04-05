@@ -2,7 +2,7 @@
 
 `life-spec` does not duplicate machine-readable contracts.
 
-The canonical shared service contracts live in [finefab-shared](../../finefab-shared), under:
+The canonical shared service contracts live in [finefab-shared](https://github.com/L-electron-Rare/finefab-shared), under:
 
 - `finefab-shared/schemas/` for JSON Schema sources
 - `finefab-shared/python/` for generated Pydantic models

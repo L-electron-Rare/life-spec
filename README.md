@@ -40,4 +40,4 @@ gates/        # BMAD gate definitions (S0-S4)
 
 ## License
 
-[MIT](LICENSE)
+MIT
